@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+
+    <Description>an unofficial port of https://github.com/square/connect-csharp-sdk to netstandard2</Description>
+    <VersionPrefix>2.5.0</VersionPrefix>
+
+    <PackageTags>square,netstandard</PackageTags>
+    <PackageIconUrl>https://avatars2.githubusercontent.com/u/82592</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/joeaudette/square.netstandard</PackageProjectUrl>
+    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    
+    <TargetFramework>netstandard2.0</TargetFramework>
+    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NewtonSoft.Json" Version="10.0.*" />
+    <PackageReference Include="RestSharp" Version="106.1.*" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.0.*" />
+  </ItemGroup>
+
+</Project>
