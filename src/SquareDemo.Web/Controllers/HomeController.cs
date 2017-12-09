@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SquareDemo.Web.Models;
 
+//https://github.com/square/connect-api-examples/tree/master/connect-examples/v2/csharp_payment
+
 namespace SquareDemo.Web.Controllers
 {
     public class HomeController : Controller
@@ -32,6 +34,14 @@ namespace SquareDemo.Web.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult SquareDemo()
+        {
+            var model = new SquareDemoViewModel();
+            //TODO: add params
+
+            return View(model);
         }
     }
 }
