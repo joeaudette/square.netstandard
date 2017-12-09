@@ -14,6 +14,9 @@ Having the appsettings.Development.json file git ignored means you can safely pu
 
 After building the solution, run the demo web app and click the menu item for Square Demo
 
+The demo web app was implemented based on the older webforms example here:
+https://github.com/square/connect-api-examples/tree/master/connect-examples/v2/csharp_payment
+
 If you're using your sandbox credentials, you can test a valid credit card
 transaction by providing the following card information in the form:
 
