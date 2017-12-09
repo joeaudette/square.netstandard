@@ -32,7 +32,10 @@
         inputClass: 'sq-input',
         // Customize the CSS for SqPaymentForm iframe elements
         inputStyles: [{
-            fontSize: '.9em'
+            lineHeight: '30px',
+            backgroundColor: 'transparent',
+            fontSize: '18px',
+            color: '#495057'
         }],
         // Initialize Apple Pay placeholder ID
         applePay: {
@@ -164,16 +167,21 @@
 
     <style type="text/css" runat="server">
       /* Define how SqPaymentForm iframes should look */
-      .sq-input {
-        border: 1px solid rgb(223, 223, 223);
-        outline-offset: -2px;
-        margin-bottom: 5px;
-        display: inline-block;
-      }
+        .sq-input {
+            border: 1px solid rgb(223, 223, 223);
+            outline-offset: -2px;
+            margin-bottom: 5px;
+            display: inline-block;
+            height: 36px;
+            text-align: center;
+            vertical-align: middle;
+        }
       /* Define how SqPaymentForm iframes should look when they have focus */
+        
       .sq-input--focus {
         outline: 5px auto rgb(59, 153, 252);
       }
+         
       /* Define how SqPaymentForm iframes should look when they contain invalid values */
       .sq-input--error {
         outline: 5px auto rgb(255, 97, 97);
@@ -181,7 +189,7 @@
       /* Customize the "Pay with Credit Card" button */
       .button-credit-card {
         min-width: 200px;
-        min-height: 20px;
+        min-height: 38px;
         padding: 0;
         margin: 5px;
         line-height: 20px;
@@ -240,22 +248,23 @@
         cursor:pointer;
         display: none;
       }
-      #sq-walletbox {
-        float:left;
-        margin:5px;
-        padding:10px;
-        text-align: center;
+        #sq-walletbox {
+            float: left;
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
         vertical-align: top;
-        font-weight: bold;
-      }
-      #sq-ccbox {
-        float:left;
-        margin:5px;
-        padding:10px;
-        text-align: center;
-        vertical-align: top;
-        font-weight: bold;
-      }
+            font-weight: bold;
+        }
+        #sq-ccbox {
+            float: left;
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+            /*
+        vertical-align: top;*/
+            font-weight: bold;
+        }
     </style>
 }
 
