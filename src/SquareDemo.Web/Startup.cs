@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SquareDemo.Web.Models;
 
 namespace SquareDemo.Web
 {
@@ -21,6 +22,8 @@ namespace SquareDemo.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<SquareSettings>(Configuration.GetSection("SquareSettings"));
+
             services.AddMvc();
         }
 

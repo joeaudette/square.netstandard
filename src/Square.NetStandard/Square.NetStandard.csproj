@@ -12,6 +12,8 @@
     
     <TargetFramework>netstandard2.0</TargetFramework>
     
+    <RootNamespace>Square.Connect</RootNamespace>
+    
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,0 +1,29 @@
+﻿@model SquareDemo.Web.Models.SquareChargeResultViewModel
+@{
+    ViewData["Title"] = "Square Result";
+}
+<h2>@ViewData["Title"]</h2>
+@if (!string.IsNullOrWhiteSpace(Model.ErrorMessage))
+{
+    <h3>@Model.ErrorMessage</h3>
+}
+
+
+@if(Model.Response != null)
+{
+    if(Model.Response.Transaction != null)
+    {
+        <div>Transaction.Id: @Model.Response.Transaction.Id</div>
+
+    }
+    if(Model.Response.Errors != null && Model.Response.Errors.Count > 0)
+    {
+        foreach(var err in Model.Response.Errors)
+        {
+            <div>@err.ToString()</div>
+
+        }
+
+    }
+
+}
