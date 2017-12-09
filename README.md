@@ -1,6 +1,6 @@
 # an unofficial port of https://github.com/square/connect-csharp-sdk to netstandard2
 
-https://www.nuget.org/packages/Square.NetStandard/2.5.0
+https://www.nuget.org/packages/Square.NetStandard/
 
 
 ### Provide required credentials
