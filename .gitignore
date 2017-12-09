@@ -290,3 +290,4 @@ __pycache__/
 **/wwwroot/lib/**
 src/SquareDemo.Web/wwwroot/js/site.min.js
 src/SquareDemo.Web/wwwroot/css/site.min.css
+src/SquareDemo.Web/appsettings.Development.json
