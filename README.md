@@ -36,4 +36,6 @@ get the transaction repsonse body in an alert window.
 
 ## Apple Pay
 
+Apple Pay Requires https and it cannot be tested from localhost so it will be disabled in the demo running on localhost.
+
 Please follow the Apple Pay instructions on [Square Connect Documentation Site](https://docs.connect.squareup.com/articles/adding-payment-form).
