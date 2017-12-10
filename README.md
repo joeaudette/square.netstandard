@@ -1,7 +1,27 @@
 # an unofficial port of https://github.com/square/connect-csharp-sdk to netstandard2
 
+## NuGet Package
+
 https://www.nuget.org/packages/Square.NetStandard/
 
+## Rationale
+
+The official sdk does not currently support .NET Core/NetStandard/ASP.NET Core as seen in [this issue](https://github.com/square/connect-csharp-sdk/issues/30).
+I needed to use Square in one of my ASP.NET Core projects so I ported the sdk code. It was relatively straightforward porting the code. I made a netstandard2 class library project and copied in the code files and added these dependencies in the .csproj file:
+
+    <ItemGroup>
+    <PackageReference Include="NewtonSoft.Json" Version="10.0.*" />
+    <PackageReference Include="RestSharp" Version="106.1.*" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.0.*" />
+  </ItemGroup>
+  
+There was one file that was using Syste.Web.HttpUtility which I changed to use an equivalent class in ASP.NET Core. There was one place where a RestSharp method required an additional paramter to be passed in. I think those were the only changes needed to make it build. Then I made a demo web app to test it.
+
+Hopefully eventually the official sdk will support NetStandard, but in the mean time so far this port seems to work and meet my needs.
+
+
+## Running the SquareDemo.Web Sample Project
 
 ### Provide required credentials
 
@@ -10,9 +30,6 @@ Copy the appsettings.json file as appsettings.Development.json
 In this repository appsettings.Development.json is a gitignored file so you can safely put your credentials there. If you are using your own repository be sure to gitignore it there too.
 
 Having the appsettings.Development.json file git ignored means you can safely put your square sandbox credentials there without it going into source control.
-
-
-## Running the sample
 
 After building the solution, run the demo web app and click the menu item for Square Demo
 
