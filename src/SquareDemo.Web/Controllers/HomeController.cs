@@ -113,21 +113,23 @@ namespace SquareDemo.Web.Controllers
             // see the Transactions API documentation on our [developer site]
             // (https://docs.connect.squareup.com/payments/transactions/overview#mpt-overview).
             ChargeRequest body = new ChargeRequest(AmountMoney: amount, IdempotencyKey: uuid, CardNonce: nonce);
-            
+
             var model = new SquareChargeResultViewModel();
-            
+
             try
             {
                 model.Response = transactionsApi.Charge(LocationId(), body);
-                
+
                 //result =  "Transaction complete\n" + response.ToJson();
             }
             catch (ApiException e)
             {
-                model.ErrorMessage =  e.Message;
+                model.ErrorMessage = e.Message;
             }
 
             return View("SquareResult", model);
         }
+
+        
     }
 }
